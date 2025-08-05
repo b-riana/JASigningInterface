@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: rgb(191, 219, 247);
+    padding: 5px;
+    text-align: center;
+    
+    color: black;
+  }
+  
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: left;
+    width: 50%;
+    height: 450px;
+    background: rgb(225, 229, 242);
+    padding: 20px;
+    list-style-type: none;
+  }
+  
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    height:450px; 
+  }
+  
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+  footer {
+    background-color: rgb(191, 219, 247);
+    padding: 5px;
+    text-align: center;
+    color: black;
+  }
+  
+  /*makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  .btn{
+    border: none;
+  background: none;
+  outline: none;
+  background-color: #49475B;
+  border-radius: 50px;
+  display: flex;
+  gap: 5 px;
+  color: #fff;
+  padding: 10px;
+  margin-right: 50px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  }
+  
+
+  .video{
+    height: 80%;
+    width: 50%;
+  }
+
+
+  
+  .help {
+    width: 40px;
+    margin: 0 auto;
+    margin-right: 5px;
+    
+  }
+  
+  .help .question {
+    height: 20px;
+    width: 20px;
+    background: #49475B;
+    font-size: 15px;
+    color: #fff;
+    line-height: 23px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .help .popup, .help .popup2 {
+    width: 560px;
+    height: 0px;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+    background: #eee;
+    opacity: 0;
+    transition: 1s;
+  }
+  
+  .help .popup {
+    left: -260px;
+    top: 10px;
+  }
+  
+  .help .popup2 {
+    height: 220px;
+  }
+  
+  .help .popup2 h4 {
+    font-size: 18px;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .help:hover .popup {
+    opacity: 1;
+    height: 270px;
+  }
+  
+ 
+  
+  .help .popup h3 {
+    margin: 0;
+    padding: 10px 0 0 10px;
+    height: 10px;
+    background: #555;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  
+  .help .popup p {
+    font-size: 16px;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  
+  .help .popup a {
+    text-decoration: none;
+    color: #317eac;
+  }
+  
+  .help .popup a:visited {
+    color: #317eac;
+  }
+  
+  .help .popup p em {
+    font-size: 12px;
+  }
